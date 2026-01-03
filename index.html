@@ -10,58 +10,7 @@
 <body>
     <!-- canvas, rysuje się wykresy w Chart.js -->
     <canvas id="pieChart" width="400" height="400"></canvas>
-
-    <script>
-        const data = [
-            { label: 'JavaScript', value: 30 },
-            { label: 'Python', value: 25 },
-            { label: 'Java', value: 20 },
-            { label: 'C#', value: 15 },
-            { label: 'Ruby', value: 10 }
-        ];
-
-        // Pobieramy kontekst (rodzaj "płótna") z elementu canvas
-        const ctx = document.getElementById('pieChart').getContext('2d');
-
-        // Tworzymy nowy wykres
-        const pieChart = new Chart(ctx, {
-            type: 'pie', // Określamy typ wykresu
-            data: {
-                // Etykiety dla poszczególnych wycinków
-                labels: data.map(item => item.label),
-                datasets: [{
-                    // Wartości dla wycinków
-                    data: data.map(item => item.value),
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.7)',   // Czerwony
-                        'rgba(54, 162, 235, 0.7)',   // Niebieski
-                        'rgba(255, 206, 86, 0.7)',   // Żółty
-                        'rgba(75, 192, 192, 0.7)',   // Turkusowy
-                        'rgba(153, 102, 255, 0.7)'   // Fioletowy
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                    title: {
-                        display: true,
-                        text: 'Popularność Języków Programowania'
-                    }
-                }
-            }
-        });
-    </script>
+    <script src="script.js"></script>
+    
 </body>
 </html>
